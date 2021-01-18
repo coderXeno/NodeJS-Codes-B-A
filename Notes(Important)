@@ -1,0 +1,9 @@
+Important plugins:-
+Please remember to install express using
+$ npm install express
+ in your cmd or bash.
+I have included the necessary folders like 
+serve-static or body-parser, but the rest of the files need to be 
+installed using npm. For database work, laravel is recommended. 
+I will be developing the database work soon enough as 
+I keep learning. 
