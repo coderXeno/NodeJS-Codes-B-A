@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(()=>{
+        $('#form').submit((e)=>{
+          e.preventDefault();
+          $.ajax({
+            url:'/',
+            type:'post',
+            contentType: 'application/json',
+            data: JSON.stringify($('#form').serializeArray()),
+            success:(response)=>{
+              console.log('Your Response was submitted successfully');
+              console.log(form);
+            }
+          })
+        })
+      })
+    </script>
+  </head>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form action="/" method="POST" id="form">
+  <label for="email">Email:</label><br>
+  <input type="email" id="fname" name="fname" value="Enter valid email"><br>
+  <label for="password">Password:</label><br>
+  <input type="password" id="fname" name="fname" value="Enter valid password between 5-10 characters"><br>
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" value="Enter name"><br>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
